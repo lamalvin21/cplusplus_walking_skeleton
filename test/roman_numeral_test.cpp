@@ -1,8 +1,5 @@
 #include <gtest/gtest.h>
-
-std::string convertInteger(const int input) {
-    return "I";
-}
+#include <roman_numeral.h>
 
 TEST(RomanNumeral, one) {
     std::string result = convertInteger(1);
