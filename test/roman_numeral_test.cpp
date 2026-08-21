@@ -1,14 +1,30 @@
 #include <gtest/gtest.h>
 #include <roman_numeral.h>
 
-TEST(RomanNumeral, One) {
-    ASSERT_EQ("I", convertToRomanNumeral(1));
+#include <string>
+
+struct RomanNumeralCase {
+    int integer;
+    std::string expected;
+};
+
+class RomanNumeralTest
+    : public testing::TestWithParam<RomanNumeralCase> {
+};
+
+TEST_P(RomanNumeralTest, ConvertsInteger) {
+    const RomanNumeralCase testCase = GetParam();
+
+    ASSERT_EQ(testCase.expected,
+              convertToRomanNumeral(testCase.integer));
 }
 
-TEST(RomanNumeral, Two) {
-    ASSERT_EQ("II", convertToRomanNumeral(2));
-}
-
-TEST(RomanNumeral, Three) {
-    ASSERT_EQ("III", convertToRomanNumeral(3));
-}
+INSTANTIATE_TEST_SUITE_P(
+    BasicNumbers,
+    RomanNumeralTest,
+    testing::Values(
+        RomanNumeralCase{1, "I"},
+        RomanNumeralCase{2, "II"},
+        RomanNumeralCase{3, "III"}
+    )
+);
