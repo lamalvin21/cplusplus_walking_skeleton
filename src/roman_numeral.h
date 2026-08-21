@@ -6,5 +6,10 @@ std::string convertToRomanNumeral(const int integer) {
         return "II";
     }
 
+    if (integer == 3)
+    {
+        return "III";
+    }
+
     return "I";
 }

@@ -8,3 +8,7 @@ TEST(RomanNumeral, One) {
 TEST(RomanNumeral, Two) {
     ASSERT_EQ("II", convertToRomanNumeral(2));
 }
+
+TEST(RomanNumeral, Three) {
+    ASSERT_EQ("III", convertToRomanNumeral(3));
+}
