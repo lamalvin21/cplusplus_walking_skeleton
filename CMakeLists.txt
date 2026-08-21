@@ -19,7 +19,6 @@ add_executable(c___skeleton src/main.cpp
 src/roman_numeral.h)
 
 add_executable(c___skeleton_test
-        test/dummy_test.cpp
         test/roman_numeral_test.cpp)
 
 target_link_libraries(c___skeleton_test
