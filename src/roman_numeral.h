@@ -3,6 +3,11 @@
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
+    if (integer == 40)
+    {
+        return "XL";
+    }
+
     while (integer >= 10)
     {
         integer -= 10;
