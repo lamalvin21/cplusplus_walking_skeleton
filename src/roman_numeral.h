@@ -5,6 +5,9 @@ std::string convertToRomanNumeral(const int integer) {
     {
         return std::string(integer, 'I');
     }
-
+    if (integer == 5)
+    {
+        return {"V"};
+    }
     return {"IV"};
 }
