@@ -1,15 +1,19 @@
 #include <string>
 
-std::string convertToRomanNumeral(const int integer) {
-    if (integer == 5)
+std::string convertToRomanNumeral(int integer) {
+    std::string result = {};
+
+    if (integer >= 5)
     {
-        return {"V"};
-    }    
+        integer -= 5;
+        result = "V";
+    }
 
     if (integer == 4)
     {
         return {"IV"};
     }
-    
-    return std::string(integer, 'I');
+
+    result += std::string(integer, 'I');
+    return result;
 }
