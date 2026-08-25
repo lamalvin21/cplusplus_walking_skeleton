@@ -3,9 +3,10 @@
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
-    if (integer == 50)
+    if (integer >= 50)
     {
-        return "L";
+        integer -= 50;
+        result += "L";
     }
 
     if (integer >= 40)
