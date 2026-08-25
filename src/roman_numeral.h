@@ -15,10 +15,10 @@ std::string convertToRomanNumeral(int integer) {
         result += "IX";
     }
 
-    if (integer >= 5)
+    while (integer >= 5)
     {
         integer -= 5;
-        result = "V";
+        result += "V";
     }
 
     if (integer == 4)
