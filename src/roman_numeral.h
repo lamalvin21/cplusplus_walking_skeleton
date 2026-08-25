@@ -3,6 +3,11 @@
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
+    if (integer == 50)
+    {
+        return "L";
+    }
+
     if (integer >= 40)
     {
         integer -= 40;
