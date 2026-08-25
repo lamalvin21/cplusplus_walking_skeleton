@@ -1,15 +1,15 @@
 #include <string>
 
-void concatenateAdjacentNumerals(const int higherNumber, const std::string &higherNumeral, int &integer, std::string &result) {
-    while (integer >= higherNumber)
+void concatenateAdjacentNumerals(const int higherInteger, const std::string &higherNumeral, int &integer, std::string &result) {
+    while (integer >= higherInteger)
     {
-        integer -= higherNumber;
+        integer -= higherInteger;
         result += higherNumeral;
     }
 
-    if (integer >= higherNumber - 10)
+    if (integer >= higherInteger - 10)
     {
-        integer -= higherNumber - 10;
+        integer -= higherInteger - 10;
         result += "X";
         result += higherNumeral;
     }
