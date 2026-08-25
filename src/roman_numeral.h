@@ -11,7 +11,8 @@ std::string convertToRomanNumeral(int integer) {
 
     if (integer == 9)
     {
-        return {"IX"};
+        integer -= 9;
+        result += "IX";
     }
 
     if (integer >= 5)
