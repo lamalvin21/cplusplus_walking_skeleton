@@ -1,6 +1,6 @@
 #include <string>
 
-void concatenateAdjacentNumerals(const int higherInteger, const std::string &higherNumeral, const int lowerInteger, int &integer, std::string &result) {
+void concatenateAdjacentNumerals(const int higherInteger, const std::string &higherNumeral, const int lowerInteger, const std::string &lowerNumeral, int &integer, std::string &result) {
     while (integer >= higherInteger)
     {
         integer -= higherInteger;
@@ -10,7 +10,7 @@ void concatenateAdjacentNumerals(const int higherInteger, const std::string &hig
     if (integer >= higherInteger - lowerInteger)
     {
         integer -= higherInteger - lowerInteger;
-        result += "X";
+        result += lowerNumeral;
         result += higherNumeral;
     }
 }
@@ -18,7 +18,7 @@ void concatenateAdjacentNumerals(const int higherInteger, const std::string &hig
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
-    concatenateAdjacentNumerals(50, "L", 10, integer, result);
+    concatenateAdjacentNumerals(50, "L", 10, "X", integer, result);
 
     while (integer >= 10)
     {
