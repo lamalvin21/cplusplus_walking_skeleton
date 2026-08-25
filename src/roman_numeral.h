@@ -20,30 +20,11 @@ std::string convertToRomanNumeral(int integer) {
 
     concatenateAdjacentNumerals(50, "L", 10, "X", integer, result);
 
-    while (integer >= 10)
-    {
-        integer -= 10;
-        result += "X";
-    }
+    concatenateAdjacentNumerals(10, "X", 1, "I", integer, result);
 
-    if (integer == 9)
-    {
-        integer -= 9;
-        result += "IX";
-    }
+    concatenateAdjacentNumerals(5, "V", 1, "I", integer, result);
 
-    while (integer >= 5)
-    {
-        integer -= 5;
-        result += "V";
-    }
+    concatenateAdjacentNumerals(1, "I", 0, "", integer, result);
 
-    if (integer == 4)
-    {
-        integer -= 4;
-        result += "IV";
-    }
-
-    result += std::string(integer, 'I');
     return result;
 }
