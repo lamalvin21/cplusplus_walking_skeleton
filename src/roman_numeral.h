@@ -1,24 +1,24 @@
 #include <string>
 
-void concatenateAdjacentNumerals(const int higherNumber, int &integer, std::string &result) {
+void concatenateAdjacentNumerals(const int higherNumber, const std::string &higherNumeral, int &integer, std::string &result) {
     while (integer >= higherNumber)
     {
         integer -= higherNumber;
-        result += "L";
+        result += higherNumeral;
     }
 
     if (integer >= higherNumber - 10)
     {
         integer -= higherNumber - 10;
         result += "X";
-        result += "L";
+        result += higherNumeral;
     }
 }
 
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
-    concatenateAdjacentNumerals(50, integer, result);
+    concatenateAdjacentNumerals(50, "L", integer, result);
 
     while (integer >= 10)
     {
