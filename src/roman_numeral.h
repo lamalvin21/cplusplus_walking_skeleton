@@ -22,7 +22,8 @@ std::string convertToRomanNumeral(int integer) {
 
     if (integer == 4)
     {
-        return {"IV"};
+        integer -= 4;
+        result += "IV";
     }
 
     result += std::string(integer, 'I');
