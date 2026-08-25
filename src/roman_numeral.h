@@ -3,7 +3,12 @@
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
-    if (integer == 9) 
+    if (integer == 10)
+    {
+        return {"X"};
+    }
+
+    if (integer == 9)
     {
         return {"IX"};
     }
