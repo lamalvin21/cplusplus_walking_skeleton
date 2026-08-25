@@ -3,9 +3,10 @@
 std::string convertToRomanNumeral(int integer) {
     std::string result = {};
 
-    if (integer == 10)
+    if (integer >= 10)
     {
-        return {"X"};
+        integer -= 10;
+        result = "X";
     }
 
     if (integer == 9)
