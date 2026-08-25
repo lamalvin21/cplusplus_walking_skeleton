@@ -25,6 +25,7 @@ INSTANTIATE_TEST_SUITE_P(
     testing::Values(
         RomanNumeralCase{1, "I"},
         RomanNumeralCase{2, "II"},
-        RomanNumeralCase{3, "III"}
+        RomanNumeralCase{3, "III"},
+        RomanNumeralCase{4, "IV"}
     )
 );
