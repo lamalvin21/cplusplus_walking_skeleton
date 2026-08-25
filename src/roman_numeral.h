@@ -1,8 +1,6 @@
 #include <string>
 
-std::string convertToRomanNumeral(int integer) {
-    std::string result = {};
-
+void concatenateAdjacentNumerals(int &integer, std::string &result) {
     while (integer >= 50)
     {
         integer -= 50;
@@ -14,6 +12,11 @@ std::string convertToRomanNumeral(int integer) {
         integer -= 40;
         result += "XL";
     }
+}
+std::string convertToRomanNumeral(int integer) {
+    std::string result = {};
+
+    concatenateAdjacentNumerals(integer, result);
 
     while (integer >= 10)
     {
